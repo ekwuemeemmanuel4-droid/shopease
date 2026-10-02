@@ -1,0 +1,169 @@
+/* ---------- Global theme ---------- */
+:root {
+  --brand-1: #7C3AED;
+  --brand-2: #EC4899;
+  --brand-gradient: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  --bg: #F8F7FC;
+  --text-dark: #1F1B2E;
+  --text-light: #6B6480;
+  --card-bg: #FFFFFF;
+  --shadow: 0 4px 16px rgba(124, 58, 237, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text-dark);
+}
+
+/* ---------- Navbar ---------- */
+nav {
+  background: var(--brand-gradient);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  box-shadow: var(--shadow);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* ---------- Page headings ---------- */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin: 32px 0;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* ---------- Product grid ---------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 0 32px 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.product-card h3,
+.product-card h2 {
+  margin: 8px 0 4px;
+  font-size: 18px;
+  color: var(--text-dark);
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.product-price {
+  color: var(--brand-1);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.product-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Buttons ---------- */
+.add-to-cart-btn,
+button[type="submit"] {
+  background: var(--brand-gradient);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.add-to-cart-btn:hover,
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Forms (Checkout / Login) ---------- */
+.form-group {
+  max-width: 400px;
+  margin: 0 auto 16px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #E5E0F0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--brand-1);
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* ---------- Loading / empty states ---------- */
+.home > p,
+.shop > p {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 16px;
+  padding: 48px 16px;
+}

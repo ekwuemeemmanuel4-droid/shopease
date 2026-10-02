@@ -1,0 +1,8 @@
+node_modules
+.env
+.env.*
+body.json
+loginbody.json
+orderbody.json
+paymentbody.json
+test.ps1
