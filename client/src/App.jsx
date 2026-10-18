@@ -8,7 +8,7 @@ import Shop from "./pages/Shop";
 import ProductDetails from "./pages/ProductDetails";
 import Checkout from "./pages/Checkout";
 import Login from "./pages/Login";
-import OrderSuccess from "./OrderSucess";
+import OrderSuccess from "./OrderSuccess";
 
 
 
