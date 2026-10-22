@@ -52,7 +52,7 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
             style={{ width: '100%', padding: '0.5rem' }}
-          />
+          /> 
         </div>
         {error && <p style={{ color: '#ff6b6b' }}>{error}</p>}
         <button type="submit" style={{ width: '100%', padding: '0.7rem' }}>
